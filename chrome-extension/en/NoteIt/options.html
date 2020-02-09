@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NoteIt</title>
+  <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="js/options.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/options.css" text="text/css">
+
+</head>
+<body>
+   
+        <div class="header">
+          <h1>NoteIt Setting</h1>
+        </div>
+    
+      <form>
+
+          <h2>when selected text</h2>
+          <label class="radioContainer">
+            <input type="radio" name="generalOptionVal" id="clipboardOnly" value="clipboardOnly">
+              Copy to clipboard only
+            <span class="circle"></span>
+          </label>
+
+          <label class="radioContainer">
+            <input type="radio" name="generalOptionVal" id="optionOnly" value="optionOnly">
+              Show me an option box every time text is selected
+            <span class="circle"></span>
+          </label>
+
+        <div class="radio">
+          <label class="radioContainer">
+            <input type="radio" name="generalOptionVal" id="pause" value="pause">
+              Just pause it all for now
+              <span class="circle"></span>
+          </label>
+        </div>
+
+        <hr>
+
+        <h3> Highlight other selected text </h3>
+          <label class="radioContainer">
+            <input type="radio" name="highlightVal" id="highlightText" value="highlightText">
+              Highlight similar text selected in the document
+              <span class="circle"></span>
+          </label>
+
+          <label class="radioContainer">
+            <input type="radio" name="highlightVal" id="dontHighlightText" value="dontHighlightText">
+              Do not highlight similar text selected
+              <span class="circle"></span>
+          </label>
+        <hr>
+
+        <h3> Additional Options </h3>
+
+        <strong>When selecting text from a text/input box?</strong>
+          <label class="radioContainer">
+            <input type="radio" name="inputBoxSelect" id="dontSelectText" value="dontSelectText">
+            Dont run any NoteIt operations
+            <span class="circle"></span>
+          </label>
+        
+
+
+          <label class="radioContainer">
+            <input type="radio" name="inputBoxSelect" id="selectText" value="selectText">
+              Run the default select option (above).
+              <span class="circle"></span>
+          </label>
+        
+
+        <div class="form-group">
+          <button id="generalOptionSave">Update Settings</button>
+        </div>
+      </form>
+
+      <footer class="footer">
+        <p>&copy; NoteIt | Developed by Armiyoon <a href="http://github.com/m_kosari" target="_blank">kosari</a> | <a href="mailto:kosari.md@gmail.com">email send</a> | <small><span id="versionNum"></span></small> </p>
+      </footer>
+
+
+  </body>
+  </html>

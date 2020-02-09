@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+
+  "name": "NoteIt",
+  "description": "Save article and document images easily without loss",
+  "version": "0.0.0",
+  "options_page": "options.html",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "img/icon128.png",
+    "default_popup": "login.html"
+  },
+  "web_accessible_resources": [
+      "img/*.png"
+    ],
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "clipboardWrite",
+    "contextMenus",
+    "identity",
+    "http://noteit.pythonanywhere.com/auth/convert-token",
+    "http://noteit.pythonanywhere.com/note/api/articles/create/",
+    "http://noteit.pythonanywhere.com/note/api/articles",
+    "http://noteit.pythonanywhere.com/note/api/notes/create/"
+  ],
+  "background": {
+      "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["css/popover.min.css"],
+      "js": ["js/auth.js","js/vendor/jquery.min.js", "js/vendor/popover.min.js", "js/select.js", "js/vendor/jquery.mark.min.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "oauth2": {
+    "client_id": "172721583058-d2o63g797nofeclgj67dn999oee3msob.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxXHFLdxZlHym/i4cX6MWCmB/4GCE++M2vTPLxr4FslseGJBJnuKkc3ze84RemjSOSmnAAyS3pCSqlv9B1uEnr9OwLvoyom4WLX/dtdQ86P3B5FE1V61V/w8tgu+boW6QNJRYcAc6LidUEoHT9yo7ysCr8cKpz3Am9U/nnSpQLCnl0P1NI9xUNFzvyz7lQNM1WjagHmIsV6dVXzZVnlfTxx3nAe6cD6tlysQeS+RlPOjzoxpjO3UMooGxCG/0gBSmhD6z8/YwpjuVwj1dx/NFa9Zg1vBzDMvJNr+AIlEF3xc8NNhSE6/2b1L29phtq7BNQ9+HYMIVeV8NyRlSB8Vq9QIDAQAB"
+
+}

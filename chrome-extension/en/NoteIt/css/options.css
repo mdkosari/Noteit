@@ -1,0 +1,128 @@
+body {
+  background: #f3f3f3;
+  margin: auto;
+}
+
+
+
+.header {
+  padding: 3px;
+  text-align: center;
+  background: #f3f3f3;
+  color: #6d6d72;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* The container */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  direction: rtl;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .circle {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .circle {
+  background-color: #1abc9c;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.circle:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .circle:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .circle:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+form{
+  max-width: 700px;
+  margin: auto;
+  border-style: none;
+  border-width: 2px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  direction: rtl;
+}
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .form-group{
+    text-align: center;
+  }
+
+  .form-group button{
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    background-image: linear-gradient(145deg, #01EF92, #00D8FB), linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25));
+  }
+
+  .form-group button:hover{
+    background: #1abc9c;
+    cursor: pointer;
+    color: #fff;
+  }
+}

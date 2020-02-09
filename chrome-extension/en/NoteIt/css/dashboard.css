@@ -1,0 +1,287 @@
+body{
+	width: 350px;
+	text-align:left;
+	color: #495057;
+	font-weight: 400;
+	padding: 0 0 0 0;
+}
+
+
+/*header layout styles*/
+.header{
+	height: 60px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	z-index: 10;
+	width: 100%;
+	transition: all 0.2s;
+}
+
+.header-conent{
+	background: #fafbfc;
+	width: 100%;
+	position: 0;
+	height:60px;
+	align-items: center;
+	display: flex;
+	z-index: 10;
+	box-sizing: border-box;
+	padding: 0 0 0 0;
+	flex: 1;
+}
+
+.header-dots{
+	margin-left:auto;
+	display: flex;
+	box-sizing: border-box;
+	margin-left: 10px;
+}
+
+.header-option{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.btn-option{
+	cursor: pointer;
+	position: relative;
+	border: none;
+	border-radius: 40px;
+	width: 30px;
+	height: 30px;
+	padding: 3px 0 0 1px;
+	margin-right: 5px;
+	justify-content: center;
+	outline: none;
+}
+
+
+
+.btn-option img{
+	width: 25px;
+	height: 25px;
+}
+
+.user-info{
+	max-width: 225px;
+	width: 220px;
+	padding: 0 0 0 0;
+	display: flex;
+	position: relative;
+	box-sizing: border-box;
+	justify-content: flex-end;
+	margin-left: 10px;
+}
+
+.user-info::before{
+	position: absolute;
+	left: -1px;
+	top: 50%;
+	background: #dee2e6;
+	width: 1px;
+	height: 30px;
+	margin-top: -15px;
+	content: '';
+}
+
+.user-content{
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+	box-sizing: border-box;
+	padding-left: 10px;
+	align-items: center;
+
+}
+
+.user-content img{
+	border-radius: 50px;
+	width: 42px;
+	height: 42px;
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.user-content h3{
+	cursor: pointer;
+}
+
+.user-content p{
+}
+
+#recycle{
+	background: #e3f2fc;
+}
+
+#refresh{
+	background: #8bb7f0;
+}
+
+#signout{
+	background: #e67e22;
+}
+
+#recycle:hover{
+	background: #999999;
+}
+
+#signout:hover{
+	background: #999999;
+}
+
+#refresh:hover{
+	background: #999999;
+}
+
+.header-user{
+	align-items: center;
+	display: flex;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+/*main styles*/
+.main{
+	padding-top: 10px;
+	flex: 0 0 50%;
+	width: 100%;
+}
+
+.list{
+	box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+	border-width: 0;
+	transition: all 0.2s;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	background-clip: border-box;
+	word-wrap: break-word;
+	border: 1px solid rgba(26,54,126,0.125);
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+}
+
+.list-header{
+	border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+	display: flex;
+	align-items: center;
+	border-bottom-width: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 0.625rem;
+	height: 2.7rem;
+	text-transform: uppercase;
+	color: rgba(13,27,62,0.7);
+	padding: 0.3rem 1.25rem;
+	margin-bottom: 0;
+	background-color: #fff;
+	border-bottom: 1px rgba(26,54,126,0.125);
+	box-sizing: border-box;
+}
+
+
+
+.list-header-content{
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	box-sizing: border-box;
+	direction: rtl;
+}
+
+.list-header-content img{
+	width: 20px;
+	height: 20px;
+	margin:0 0 3px 3px;
+	cursor: pointer;
+}
+
+.list-header-content i{
+	cursor: default;
+}
+
+.list-main{
+	height: 230px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.list-body{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	display: block;
+}
+
+.list-content{
+	padding: 0 0.5rem;
+	box-sizing: border-box;
+}
+
+
+.list-content-inner{
+	/*padding: 0.5rem;*/
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+}
+
+.list-content-inner ul{
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.list{
+	padding: 0.5rem 0 0.1rem 0.1rem;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	list-style-type: none;
+}
+
+
+
+.list li{
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	height: 38px;
+	padding: 0px;
+	margin-bottom: 3px;
+	padding: 3px;
+	border-bottom: 1px rgba(26,54,126,0.125);
+	border-radius: 4px;
+	padding-right: 7px;
+	margin-right: 5px;
+
+}
+
+.list div{
+	display: flex;
+	width: 100%;
+}
+
+.list h4{
+	text-align: right;
+	width: 100%;
+	margin:9px 0 5px 5px;
+}
+
+.list li:hover{
+	background: #3333;
+	cursor: pointer;
+	
+
+}
+
