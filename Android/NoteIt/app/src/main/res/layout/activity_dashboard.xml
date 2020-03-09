@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:layoutDirection="ltr"
+    android:background="#474646">
+
+
+
+
+
+<!--    menu section-->
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#474646"
+        android:visibility="gone">
+
+
+    <!--        menu bar and option section begin-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+
+        <!--            close menu icon-->
+            <ImageView
+                android:id="@+id/img_menu_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_close"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="8dp"/>
+
+
+        <!--            header menu layout section begin-->
+            <LinearLayout
+                android:id="@+id/ll_menu_header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_menu_profile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_person"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:scaleType="centerCrop"
+                    android:padding="0dp"
+                    android:background="@drawable/img_profile_menu"/>
+
+                <TextView
+                    android:id="@+id/tv_menu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohammad Kosari"
+                    android:textColor="#E2DCDC"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+        <!--            header menu layout section end-->
+
+
+
+        <!--            item menu layout section begin-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_article"
+                    layout="@layout/menu_item_article"
+                    android:layout_marginBottom="2dp"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_fav"
+                    layout="@layout/menu_item_fav"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_library"
+                    layout="@layout/menu_item_library" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2DCDC"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_share"
+                    layout="@layout/menu_item_share" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2DCDC"/>
+
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_archive"
+                    layout="@layout/menu_item_archive"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_trash"
+                    layout="@layout/menu_item_trash"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2DCDC"/>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_setting"
+                    layout="@layout/menu_item_setting" />
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:id="@+id/ll_menu_item_hellp"
+                    layout="@layout/menu_item_help" />
+
+
+            </LinearLayout>
+        <!--            item menu layout section end-->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"/>
+
+
+        <!--            footer menu layout section begin-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.07"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/splash_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_2020"
+                    android:textColor="#E2DCDC"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+        <!--            footer menu layout section end-->
+
+        </LinearLayout>
+    <!--        menu bar and option section end-->
+
+
+<!--        main layout inner menu layout begin-->
+        <LinearLayout
+            android:id="@+id/ll_menu_inner_main"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:layout_marginStart="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/bg_toolbar_menu_open">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_more"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/lv_menu_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_menu_open"/>
+
+
+        </LinearLayout>
+<!--        main layout inner menu end-->
+
+
+
+    </LinearLayout>
+<!--    end menu section-->
+
+
+
+<!--    main section begin-->
+    <LinearLayout
+        android:id="@+id/ll_main_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginStart="0dp"
+        android:background="#fdfdfd">
+
+
+
+
+    <!--        toolbar layout  section begin-->
+        <LinearLayout
+            android:id="@+id/ll_dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/bgToolbar"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/img_toolbar_menu_opener"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_menu"
+                android:padding="1dp"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/et_title_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="Dashboard"
+                android:editable="true"
+                android:textColor="#E2DCDC"
+                android:background="@color/bgToolbar"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"/>
+
+
+            <ImageView
+                android:id="@+id/img_toolbar_menu_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_search"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="center"/>
+
+
+            <ImageView
+                android:id="@+id/img_toolbar_menuPopup"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_more"
+                android:layout_marginEnd="5dp"
+                android:padding="4dp"/>
+
+
+        </LinearLayout>
+
+    <!--        end toolbar section-->
+
+
+        <ListView
+            android:id="@+id/lv_dashboard_article"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#E2DCDC"
+            android:dividerHeight="1dp"
+            android:fitsSystemWindows="true"
+            android:paddingStart="23dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
+            tools:listitem="@layout/list_article_item" />
+
+
+    </LinearLayout>
+
+<!--    main section end-->
+
+
+    <ImageView
+        android:id="@+id/img_dashboard_option_opener"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_up"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_arrow_up_option"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/ll_dashboard_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bg_option_layout"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_dashboard_option_closer"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.08"
+            android:src="@drawable/ic_arrow_down"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_arrow_down_option"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_home"
+                    android:layout_marginStart="5dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_star"
+                    android:layout_marginStart="5dp"/>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_folder"
+                    android:layout_marginStart="5dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_folder_shared"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#E2DCDC"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+
+        <ListView
+            android:id="@+id/lv_dashboard_option"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:dividerHeight="1dp"
+            android:divider="#E2DCDC"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
