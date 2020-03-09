@@ -3,7 +3,7 @@
 
   "name": "NoteIt",
   "description": "Save article and document images easily without loss",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "options_page": "options.html",
   "icons": {
     "16": "img/icon16.png",
