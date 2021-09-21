@@ -1,8 +1,7 @@
 # Noteit
 project for save and edite your article an notes
-https://github.com/m-kosari/Noteit/tree/master/chrome-extension/dashboard.png
 
-manage yore articles
+                        manage yore articles
 ![plot](./chrome-extension/dashboard.png)
 
 
