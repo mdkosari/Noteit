@@ -2,7 +2,7 @@
 project for save and edite your article & notes
 
                                             view & manage yore articles
-<p align="center>![plot](./chrome-extension/dashboard.png)</p>
+<p align="center> <img src="./chrome-extension/dashboard.png"/></p>
 
 
                                             Aouto Save Articles By selected in Web and Click Icon Showng
